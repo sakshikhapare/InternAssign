@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Management System</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- Login Section -->
+        <section class="section">
+            <h2>Login</h2>
+            <form id="loginForm" class="form">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+
+                <button type="button" onclick="authenticate()">Login</button>
+            </form>
+        </section>
+
+        <!-- Customer List Section -->
+        <section class="section">
+            <h2>Customer List</h2>
+            <table id="customerTable" class="table" border="1">
+                <!-- Customer data will be populated here -->
+            </table>
+        </section>
+
+        <!-- Create Customer Section -->
+        <section class="section">
+            <h2>Create Customer</h2>
+            <form id="createCustomerForm" class="form">
+                <!-- Input fields for creating a new customer -->
+                <button type="button" onclick="createCustomer()">Create Customer</button>
+            </form>
+        </section>
+
+        <!-- Update Customer Section -->
+        <section class="section">
+            <h2>Update Customer</h2>
+            <form id="updateCustomerForm" class="form">
+                <!-- Input fields for updating an existing customer -->
+                <button type="button" onclick="updateCustomer()">Update Customer</button>
+            </form>
+        </section>
+
+        <!-- Delete Customer Section -->
+        <section class="section">
+            <h2>Delete Customer</h2>
+            <form id="deleteCustomerForm" class="form">
+                <label for="deleteUuid">Customer UUID:</label>
+                <input type="text" id="deleteUuid" name="deleteUuid" required>
+
+                <button type="button" onclick="deleteCustomer()">Delete Customer</button>
+            </form>
+        </section>
+
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,214 @@
+{
+	"info": {
+		"_postman_id": "f886ab16-5dfb-4165-818d-fceff6178a15",
+		"name": "Assignment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31020599",
+		"_collection_link": "https://interstellar-astronaut-821867.postman.co/workspace/f1dd62fc-ac2f-4a33-9db0-de73e3838c53/collection/31020599-f886ab16-5dfb-4165-818d-fceff6178a15?action=share&source=collection_link&creator=31020599"
+	},
+	"item": [
+		{
+			"name": "https://qa2.sunbasedata.com/sunbase/portal/api/assignment_auth.jsp",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"login_id\": \"test@sunbasedata.com\",\r\n    \"password\": \"Test@123\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://qa2.sunbasedata.com/sunbase/portal/api/assignment_auth.jsp",
+					"protocol": "https",
+					"host": [
+						"qa2",
+						"sunbasedata",
+						"com"
+					],
+					"path": [
+						"sunbase",
+						"portal",
+						"api",
+						"assignment_auth.jsp"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://qa2.sunbasedata.com/sunbase/portal/api/assignment.jsp?cmd=create",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer dGVzdEBzdW5iYXNlZGF0YS5jb206VGVzdEAxMjM=",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"first_name\": \"Jane\",\r\n    \"last_name\": \"Doe\",\r\n    \"street\": \"Elvnu Street\",\r\n    \"address\": \"H no 2\",\r\n    \"city\": \"Delhi\",\r\n    \"state\": \"Delhi\",\r\n    \"email\": \"sam@gmail.com\",\r\n    \"phone\": \"12345678\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://qa2.sunbasedata.com/sunbase/portal/api/assignment.jsp?cmd=create",
+					"protocol": "https",
+					"host": [
+						"qa2",
+						"sunbasedata",
+						"com"
+					],
+					"path": [
+						"sunbase",
+						"portal",
+						"api",
+						"assignment.jsp"
+					],
+					"query": [
+						{
+							"key": "cmd",
+							"value": "create"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://qa2.sunbasedata.com/sunbase/portal/api/assignment.jsp?cmd=delete&uuid=1234567890abcdef",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer dGVzdEBzdW5iYXNlZGF0YS5jb206VGVzdEAxMjM=",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://qa2.sunbasedata.com/sunbase/portal/api/assignment.jsp?cmd=delete&uuid=1234567890abcdef",
+					"protocol": "https",
+					"host": [
+						"qa2",
+						"sunbasedata",
+						"com"
+					],
+					"path": [
+						"sunbase",
+						"portal",
+						"api",
+						"assignment.jsp"
+					],
+					"query": [
+						{
+							"key": "cmd",
+							"value": "delete"
+						},
+						{
+							"key": "uuid",
+							"value": "1234567890abcdef"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://qa2.sunbasedata.com/sunbase/portal/api/assignment.jsp?cmd=get_customer_list",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer dGVzdEBzdW5iYXNlZGF0YS5jb206VGVzdEAxMjM=",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://qa2.sunbasedata.com/sunbase/portal/api/assignment.jsp?cmd=get_customer_list",
+					"protocol": "https",
+					"host": [
+						"qa2",
+						"sunbasedata",
+						"com"
+					],
+					"path": [
+						"sunbase",
+						"portal",
+						"api",
+						"assignment.jsp"
+					],
+					"query": [
+						{
+							"key": "cmd",
+							"value": "get_customer_list"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://qa2.sunbasedata.com/sunbase/portal/api/assignment.jsp?cmd=update&uuid=test14ce689511d948b7a7700d23e2138e7e",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer dGVzdEBzdW5iYXNlZGF0YS5jb206VGVzdEAxMjM",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"first_name\": \"Sakshi\",\r\n    \"last_name\": \"Khapare\",\r\n    \"street\": \"Chiplun\",\r\n    \"address\": \"Shivajinagar\",\r\n    \"city\": \"Ratnagiri\",\r\n    \"state\": \"Maharashtra\",\r\n    \"email\": \"sakshikhapare56@gmail.com\",\r\n    \"phone\": \"99579543210\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://qa2.sunbasedata.com/sunbase/portal/api/assignment.jsp?cmd=update&uuid=test14ce689511d948b7a7700d23e2138e7e",
+					"protocol": "https",
+					"host": [
+						"qa2",
+						"sunbasedata",
+						"com"
+					],
+					"path": [
+						"sunbase",
+						"portal",
+						"api",
+						"assignment.jsp"
+					],
+					"query": [
+						{
+							"key": "cmd",
+							"value": "update"
+						},
+						{
+							"key": "uuid",
+							"value": "test14ce689511d948b7a7700d23e2138e7e"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
